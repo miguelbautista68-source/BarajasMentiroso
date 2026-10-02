@@ -63,11 +63,11 @@ public class Baraja {
             case 1:
 
                 switch (valor) {
-                    case 10:
+                    case 8:
                         return "caballero de oros";
-                    case 11:
+                    case 9:
                         return "reina de oros";
-                    case 12:
+                    case 10:
                         return "rey de oros";
                     default:
                         return valor + " de oros";
@@ -76,11 +76,11 @@ public class Baraja {
             case 2:
 
                 switch (valor) {
-                    case 10:
+                    case 8:
                         return "caballero de copas";
-                    case 11:
+                    case 9:
                         return "reina de copas";
-                    case 12:
+                    case 10:
                         return "rey de copas";
                     default:
                         return valor + " de copas";
@@ -89,11 +89,11 @@ public class Baraja {
             case 3:
 
                 switch (valor) {
-                    case 10:
+                    case 8:
                         return "caballero de espadas";
-                    case 11:
+                    case 9:
                         return "reina de espadas";
-                    case 12:
+                    case 10:
                         return "rey de espadas";
                     default:
                         return valor + " de espadas";
@@ -102,11 +102,11 @@ public class Baraja {
             case 4:
 
                 switch (valor) {
-                    case 10:
+                    case 8:
                         return "caballero de bastos";
-                    case 11:
+                    case 9:
                         return "reina de bastos";
-                    case 12:
+                    case 10:
                         return "rey de bastos";
                     default:
                         return valor + " de bastos";
