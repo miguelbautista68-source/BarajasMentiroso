@@ -1,15 +1,15 @@
 package org.uabc.ic.modelo;
 
 public class Baraja {
-    private String palo;
+    private int palo;
     private int valor;
 
     public Baraja(){
-        palo = "espadas";
+        palo = 2;
         valor = 10;
     }
 
-    public Baraja(String palo, int valor){
+    public Baraja(int palo, int valor){
         this.palo = palo;
         this.valor = valor;
     }
@@ -22,12 +22,16 @@ public class Baraja {
         this.valor = valor;
     }
 
-    public String getPalo(){
+    public int getPalo(){
         return palo;
     }
 
-    public void setPalo(String palo){
+    public void setPalo(int palo){
         this.palo = palo;
+    }
+
+    public String toString(){
+        return "La carta es: " + palo + valor;
     }
 
 
