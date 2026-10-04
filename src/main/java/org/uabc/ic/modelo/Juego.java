@@ -70,7 +70,7 @@ public class Juego {
         /*
         * anyMatch devuele un true si encuntra al menos uno que sea verdad, mostrando que mintio
         * */
-        boolean mintio = ultimaCarta.stream().anyMatch(carta -> carta.getValor() != valorDeclaro);
+        boolean mintio = ultimaCarta.stream().anyMatch(carta -> carta.getValor() != valorDeclaro && carta.getValor() != 1);
 
         // Se le dan las cartas acumuladas de la mesa al perdedor
         Jugador perdedor = mintio ? ultimoJugador : acusado;

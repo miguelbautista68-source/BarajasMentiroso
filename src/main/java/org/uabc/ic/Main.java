@@ -45,11 +45,12 @@ public class Main {
             int maximo = Math.min(4, actual.getMazo().size());
             int cuantas = leerEntero("¿Cuántas cartas vas a soltar? (1-" + maximo + "): ", 1, maximo);
 
-
-            // ganador
-            Jugador ganador = juego.obtenerGanador();
-            System.out.println("\n¡" + ganador.getNombre() + " se quedó sin cartas y GANÓ!");
         }
+
+        // ganador
+        Jugador ganador = juego.obtenerGanador();
+        System.out.println("\n¡" + ganador.getNombre() + " se quedó sin cartas y GANÓ!");
+    }
 
         // Muestra las cartas del jugador numeradas desde 1
         static void mostrarMano (Jugador jugador){
@@ -82,4 +83,3 @@ public class Main {
             return n;
         }
     }
-}

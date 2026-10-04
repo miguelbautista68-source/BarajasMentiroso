@@ -8,7 +8,7 @@ public class Jugador {
     private ArrayList<Baraja> mazo;
     private int posicion;
 
-    public Jugador(String nombre, int posiciion){
+    public Jugador(String nombre, int posicion){
         this.nombre = nombre;
         this.posicion = posicion;
         mazo = new ArrayList<>();

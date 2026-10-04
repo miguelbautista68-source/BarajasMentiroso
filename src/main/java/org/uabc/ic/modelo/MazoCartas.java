@@ -14,7 +14,7 @@ public class MazoCartas {
     public MazoCartas(){
         baraja = new ArrayList<>();
         for(int i = 1; i <= 4; i++){
-            for (int j = i; j <= 10; j++){
+            for (int j = 1; j <= 10; j++){
                 baraja.add(new Baraja(i, j));
             }
         }
