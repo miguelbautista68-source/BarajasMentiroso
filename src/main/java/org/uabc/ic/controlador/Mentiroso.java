@@ -146,6 +146,8 @@ public class Mentiroso {
             }
             System.out.println("Jugada inválida, intenta de nuevo.");
         }
+
+
     }
 
     // Si todas las cartas tienen el mismo valor (el 1 es comodín) regresa ese valor; si no, -1

@@ -81,7 +81,7 @@ public class Juego {
         perdedor.getMazo().addAll(mesa);
 
         // El perdedor toma el siguiente turno
-        turnoActual = jugadores.indexOf(perdedor);
+        // turnoActual = jugadores.indexOf(perdedor);
 
         // Reiniciar la mesa
         mesa.clear();
