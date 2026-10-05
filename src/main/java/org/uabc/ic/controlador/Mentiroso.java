@@ -21,7 +21,7 @@ public class Mentiroso {
         System.out.println("=== EL MENTIROSO ===");
 
         // 1. Pedir cuántos jugadores (mínimo 2, máximo 10)
-        int cantidad = leerEntero("¿Cuántos jugadores? (2-10): ", 2, 10);
+        int cantidad = leerEntero("¿Cuántos jugadores? ", 2, 10);
 
         // Pedir el nombre de cada jugador
         List<String> nombres = new ArrayList<>();
@@ -33,13 +33,13 @@ public class Mentiroso {
         // Crear el juego y repartir las cartas
         Juego juego = new Juego(nombres);
         juego.iniciarJuego();
-        System.out.println("Cartas repartidas. ¡Empieza el juego!");
+        System.out.println("Empieza el juego");
 
         // Ciclo del juego: cada vuelta es el turno de UN jugador
         while (true) {
             Jugador actual = juego.getJugadorActual();
 
-            System.out.println("\nPásale la compu a " + actual.getNombre() + " y presiona Enter...");
+            System.out.println("\nPásale la compu a " + actual.getNombre() + " y presiona Enter para continuar");
             sc.nextLine();
 
             System.out.println("--- Turno de " + actual.getNombre() + " ---");
@@ -77,7 +77,7 @@ public class Mentiroso {
 
         // Ganador
         Jugador ganador = juego.obtenerGanador();
-        System.out.println("\n¡" + ganador.getNombre() + " se quedó sin cartas y GANÓ!");
+        System.out.println("\n" + ganador.getNombre() + " se quedó sin cartas y gano");
     }
 
     // El jugador actual acusa al anterior. Se revelan las cartas y se reparte la mesa.
@@ -85,14 +85,14 @@ public class Mentiroso {
         List<Baraja> reveladas = juego.getUltimaCarta();
         int enMesa = juego.getMesa().size();
 
-        System.out.println("\n¡" + acusador.getNombre() + " dice que " + acusado.getNombre() + " es un MENTIROSO!");
+        System.out.println("\n" + acusador.getNombre() + " dice que " + acusado.getNombre() + " es un mentiroso");
         System.out.println("Las cartas eran: " + reveladas);
 
         // Mentiroso recibe al que ACUSA, no al acusado
         boolean mintio = juego.Mentiroso(acusador);
 
         if (mintio) {
-            System.out.println(acusado.getNombre() + " SÍ mintió y se lleva " + enMesa + " cartas.");
+            System.out.println(acusado.getNombre() + " si mintió y se lleva " + enMesa + " cartas.");
         } else {
             System.out.println(acusado.getNombre() + " decía la verdad. " + acusador.getNombre()
                     + " se lleva " + enMesa + " cartas.");
@@ -130,7 +130,7 @@ public class Mentiroso {
             if (modo == 1) {
                 valorDeclarado = valorSincero(elegidas);
                 if (valorDeclarado == -1) {
-                    System.out.println("Tus cartas no tienen el mismo valor, no puedes ser sincero con ellas.");
+                    System.out.println("Tus cartas no tienen el mismo valor, no puedes esta opción con ellas.");
                     System.out.println("Elige otras cartas o miente.");
                     continue;
                 }
@@ -140,7 +140,7 @@ public class Mentiroso {
             }
 
             if (juego.turno(elegidas, valorDeclarado)) {
-                System.out.println("Soltaste " + cuantas + " carta(s) boca abajo, declarando: "
+                System.out.println("Soltaste " + cuantas + " cartas boca abajo, declarando: "
                         + nombreValor(valorDeclarado));
                 return;
             }
