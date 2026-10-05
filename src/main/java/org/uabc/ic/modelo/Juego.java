@@ -65,6 +65,10 @@ public class Juego {
         return true;
     }
 
+    /*
+     * Se le pasa el jugador que ACUSA (el jugador actual), no al acusado.
+     * Si el ultimo jugador mintio, el pierde la mesa; si no, la pierde quien acuso.
+     */
     public boolean Mentiroso(Jugador acusado) {
 
         /*
@@ -101,5 +105,20 @@ public class Juego {
 
     public List<Baraja> getMesa(){
         return mesa;
+    }
+
+    //getters nuevos para que el Main pueda mostrar la ultima jugada
+
+    public int getValorDeclaro(){
+        return valorDeclaro;
+    }
+
+    public Jugador getUltimoJugador(){
+        return ultimoJugador;
+    }
+
+    // Regresa una copia, porque Mentiroso() limpia la lista original
+    public List<Baraja> getUltimaCarta(){
+        return new ArrayList<>(ultimaCarta);
     }
 }
